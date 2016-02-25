@@ -1,0 +1,48 @@
+{
+  "name": "luncher",
+  "version": "1.0.0",
+  "description": "get lunch options!",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean-build && npm run build-client",
+    "build-client": "./client/build.js",
+    "clean-build": "rimraf ./client/build && mkdirp ./client/build",
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-client": "mocha --opts mocha.opts --require client/test/setup.js client/test/**/*.js client/test/**/*.jsx",
+    "test-server": "mocha --opts mocha.opts server/test"
+  },
+  "author": "Darren McElligott <darren.mcelligott@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "babel-register": "^6.5.2",
+    "bunyan": "^1.7.0",
+    "compression": "^1.6.1",
+    "express": "^4.13.4",
+    "express-bunyan-logger": "^1.2.0",
+    "jade": "^1.11.0",
+    "rc": "^1.1.6",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "chai": "^3.5.0",
+    "commander": "^2.9.0",
+    "eslint": "^2.2.0",
+    "eslint-plugin-react": "^4.1.0",
+    "jsdom": "^8.0.4",
+    "minimatch": "^3.0.0",
+    "mkdirp": "^0.5.1",
+    "mocha": "^2.4.5",
+    "react-addons-test-utils": "^0.14.7",
+    "rimraf": "^2.5.2",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0",
+    "supertest": "^1.2.0",
+    "watchify": "^3.7.0"
+  }
+}

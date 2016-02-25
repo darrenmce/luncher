@@ -1,0 +1,15 @@
+node_modules
+.tmp
+.idea
+npm-debug.log
+client/build
+client/dist
+coverage
+coverage-client
+
+# Terraform
+terraform.tfvars
+.terraform
+terraform.tfstate.backup
+
+.DS_Store

@@ -1,0 +1,11 @@
+extends layout.jade
+
+block links
+    include links.jade
+
+block content
+    body
+        div#main !{htmlContent}
+        script(type='text/javascript').
+            window.props = !{props};
+        include scripts.jade
