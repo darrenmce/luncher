@@ -16,7 +16,7 @@ export default (config, log) => {
   const app = express();
   const server = http.createServer(app);
 
-  const env = app.get('env'); //set by ENV var
+  //const env = app.get('env');
 
   /* Configure Express Server */
 

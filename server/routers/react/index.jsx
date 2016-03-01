@@ -5,7 +5,7 @@ import { Router } from 'express';
 import Main from '../../../client/components/main.jsx';
 
 const reactHandler = (req, res) => {
-  const reactHtml = renderToString(<Main/>);
+  const reactHtml = renderToString(<Main />);
 
   return res.render('index', {
     title: 'Main',
