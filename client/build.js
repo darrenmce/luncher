@@ -14,7 +14,9 @@ const minimatch = require('minimatch');
  */
 const externalDeps = [
   'react',
-  'react-dom'
+  'react-dom',
+  'superagent',
+  'lodash'
 ];
 
 const outputFolder = `${__dirname}/build`;
