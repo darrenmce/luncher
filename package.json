@@ -11,6 +11,9 @@
     "test": "npm run test-server && npm run test-client && npm run lint",
     "test-client": "mocha --opts mocha.opts.client client/test/**/*.js client/test/**/*.jsx",
     "test-server": "mocha --opts mocha.opts.server server/test",
+    "watch-dev": "npm run clean-build && npm run watch-build-client -s & npm run watch-dev-server -s",
+    "watch-dev-server": "nodemon --watch . --ignore client",
+    "watch-build-client": "client/build.js --full-paths --watch"
   },
   "author": "Darren McElligott <darren.mcelligott@gmail.com>",
   "license": "ISC",
@@ -42,11 +45,13 @@
     "minimatch": "^3.0.0",
     "mkdirp": "^0.5.1",
     "mocha": "^2.4.5",
+    "nodemon": "^1.9.1",
     "react-addons-test-utils": "^0.14.7",
     "rimraf": "^2.5.2",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
     "supertest": "^1.2.0",
+    "watch": "^0.17.1",
     "watchify": "^3.7.0"
   }
 }
