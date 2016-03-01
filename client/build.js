@@ -20,7 +20,7 @@ const externalDeps = [
 const outputFolder = `${__dirname}/build`;
 const externalFile = path.join(outputFolder, 'external_bundle.js');
 const appFile = path.join(outputFolder, 'bundle.js');
-const appEntry = `${__dirname}/components/main.jsx`;
+const appEntry = `${__dirname}/components/app.jsx`;
 const watchglob = `${__dirname}/**/*.js*`;
 /**
  **/
