@@ -8,9 +8,9 @@
     "build-client": "./client/build.js",
     "clean-build": "rimraf ./client/build && mkdirp ./client/build",
     "lint": "eslint --ignore-path .gitignore .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test-client": "mocha --opts mocha.opts --require client/test/setup.js client/test/**/*.js client/test/**/*.jsx",
-    "test-server": "mocha --opts mocha.opts server/test"
+    "test": "npm run test-server && npm run test-client && npm run lint",
+    "test-client": "mocha --opts mocha.opts.client client/test/**/*.js client/test/**/*.jsx",
+    "test-server": "mocha --opts mocha.opts.server server/test",
   },
   "author": "Darren McElligott <darren.mcelligott@gmail.com>",
   "license": "ISC",
