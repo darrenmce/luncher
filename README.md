@@ -1,9 +1,21 @@
+### Install deps
+
+```sh
+npm install
+```
+
 ### Running
 
 ```sh
 
-npm i && npm run build
-node .
+npm run build && node .
+```
+
+
+### Running in Dev Mode (with watchers)
+
+```sh
+npm run watch-dev
 ```
 
 ##### Open the browser to http://localhost:8080
