@@ -7,6 +7,7 @@ import bunyanExpress from 'express-bunyan-logger';
 
 /* Routers */
 import createHealthRouter from './routers/health';
+import apiRouter from './routers/api';
 import reactRouter from './routers/react/index.jsx';
 
 const root = path.normalize(path.join(__dirname, '/..'));
@@ -35,6 +36,7 @@ export default (config, log) => {
 
   /* App Routes */
   app.use('/health', createHealthRouter(config.name, config.version));
+  app.use('/api', apiRouter);
   app.use('/', reactRouter);
 
   return server;
