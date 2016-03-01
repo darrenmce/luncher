@@ -15,6 +15,7 @@
   "author": "Darren McElligott <darren.mcelligott@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.5.2",
     "babel-register": "^6.5.2",
     "bunyan": "^1.7.0",
     "compression": "^1.6.1",
