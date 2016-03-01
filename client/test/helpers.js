@@ -3,7 +3,7 @@ import chai from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import { findDOMNode } from 'react-dom';
-import { renderIntoDocument, Simulate,
+import { renderIntoDocument, createRenderer, Simulate,
   findRenderedDOMComponentWithClass as findComponentWithClass,
   scryRenderedDOMComponentsWithClass as findComponentsWithClass,
   findRenderedDOMComponentWithTag as findComponentWithTag,
@@ -16,6 +16,12 @@ let { assert, expect } = chai;
 
 chai.should();
 chai.use(sinonChai);
+
+const shallowRender = (Element, props) => {
+  const renderer = createRenderer();
+  renderer.render(React.createElement(Element, props));
+  return renderer.getRenderOutput();
+};
 
 export {
   React,
@@ -32,5 +38,7 @@ export {
   findComponentsWithTag,
   findComponentWithType,
   findComponentsWithType,
-  Simulate
+  Simulate,
+  createRenderer,
+  shallowRender
 };
