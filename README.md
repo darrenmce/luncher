@@ -1,3 +1,7 @@
+### ?
+
+A demo of an easy isomorphic/universal react/express app using `react-router`
+
 ### Install deps
 
 ```sh
