@@ -6,6 +6,12 @@ block links
 block content
     body
         div#main !{htmlContent}
+        div#demo-controls
+            a(href='/') Load using data from server
+            br
+            a(href='/?skipServerBit=1') Load using data from ajax
+            br
+            p Check out the network tab to see what is going on with each
         script(type='text/javascript').
             window.props = !{props};
         include scripts.jade
